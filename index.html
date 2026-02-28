@@ -8,30 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <h1>多边形向量可视化工具</h1>
-
-        <div class="input-section">
-            <label for="vectorInput">输入向量数组（JSON格式）：</label>
-            <textarea id="vectorInput" rows="10" placeholder='请输入向量数组，例如：
-[
-    "X=1500.313 Y=589.756 Z=0.000",
-    "X=1500.313 Y=306.219 Z=0.000",
-    "X=1296.167 Y=306.219 Z=0.000"
-]'></textarea>
-
-            <div class="button-group">
-                <button id="addPolygon">添加多边形</button>
-                <button id="clearAll">清除所有</button>
-            </div>
-        </div>
-
         <div class="canvas-section">
             <canvas id="polygonCanvas"></canvas>
         </div>
 
-        <div class="polygon-list">
-            <h3>已添加的多边形：</h3>
-            <ul id="polygonListItems"></ul>
+        <!-- 右侧多边形列表悬浮窗 -->
+        <div class="polygon-list-panel">
+            <div class="panel-header" id="polygonListHeader">
+                <span class="panel-toggle">◀</span>
+                <h3>多边形列表</h3>
+            </div>
+            <div class="panel-content">
+                <div id="polygonListItems"></div>
+            </div>
+        </div>
+
+        <!-- 底部输入悬浮窗 -->
+        <div class="input-panel">
+            <div class="panel-header" id="inputPanelHeader">
+                <h3>添加多边形</h3>
+                <span class="panel-toggle">▼</span>
+            </div>
+            <div class="panel-content">
+                <label for="vectorInput">输入向量数组（JSON格式）：</label>
+                <textarea id="vectorInput" rows="6" placeholder='例如：["X=1500.313 Y=589.756 Z=0.000", "X=1500.313 Y=306.219 Z=0.000"]'></textarea>
+                <div class="button-group">
+                    <button id="addPolygon">添加多边形</button>
+                    <button id="clearAll">清除所有</button>
+                </div>
+            </div>
         </div>
     </div>
 
