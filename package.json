@@ -1,0 +1,14 @@
+{
+  "name": "polygon-visualizer",
+  "version": "1.0.0",
+  "description": "3D向量多边形可视化工具",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
